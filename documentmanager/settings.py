@@ -30,7 +30,7 @@ DEBUG = True
 
 SITE_ID = 2
 SITE_PROTOCOL = "https://"
-SITE_DOMAIN = "hp-sales.vbr.ro"
+SITE_DOMAIN = "vmax-documents.vbrlabs.io"
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
@@ -139,10 +139,10 @@ ASGI_APPLICATION = "documentmanager.asgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "hp_sales_db_new",
-        "USER": "hp_assistent",
-        "PASSWORD": "Xoxo.gg@28",
-        "HOST": "192.168.1.171",
+        "NAME": "vmax_documents_new",
+        "USER": "vmax_last_user",
+        "PASSWORD": "Cica-slobozi-m-ai-bah!",
+        "HOST": "40.113.167.20",
         "PORT": "5432",
     }
 }
@@ -150,7 +150,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://192.168.1.177:6379",
+        "LOCATION": "redis://40.113.167.20:6379",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
@@ -161,12 +161,12 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("192.168.1.177", 6379)],
+            "hosts": [("40.113.167.20", 6379)],
         },
     },
 }
 
-DEFENDER_REDIS_URL = "redis://192.168.1.177:6379"
+DEFENDER_REDIS_URL = "redis://40.113.167.20:6379"
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
