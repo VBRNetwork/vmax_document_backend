@@ -257,9 +257,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_ROOT = BASE_DIR / "static/"
-STATIC_URL = "api/static/"
+STATIC_URL = "https://vmax-documents.vbrlabs.io/api/static/"
 
-MEDIA_URL = "https://hp-sales.veetech.ro/api/media/"
+MEDIA_URL = "https://vmax-documents.vbrlabs.io/api/media/"
 MEDIA_ROOT = BASE_DIR / "media/"
 
 GEOIP_PATH = BASE_DIR / "geoip/"
