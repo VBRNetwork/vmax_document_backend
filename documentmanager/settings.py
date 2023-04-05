@@ -81,7 +81,8 @@ ADDONS = [
 
 INSTALLED_APPS = (
     [
-        "django.contrib.admin",
+        'material',
+        'material.admin',
         "django.contrib.auth",
         "django.contrib.contenttypes",
         "django.contrib.sessions",
@@ -90,6 +91,10 @@ INSTALLED_APPS = (
         "django.contrib.staticfiles",
         "django.contrib.sites",
         "contracts",
+        "companymanager",
+        "payroll",
+        "humanresources",
+        "appointments",
     ]
     + ADDONS
     + MICROSERVICES
