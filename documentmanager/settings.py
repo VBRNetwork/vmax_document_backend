@@ -287,29 +287,26 @@ LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
 LOGGING = {
     "version": 1,
-    "disable_existing_loggers": True,
+    "disable_existing_loggers": False,
     "formatters": {
-        "json": {
-            "()": CustomisedJSONFormatter,
+       "verbose": {
+            "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s"
         },
     },
     "handlers": {
-        "app_log_file": {
-            "level": LOG_LEVEL,
-            "class": "logging.handlers.RotatingFileHandler",
-            "filename": os.path.join(LOG_PATH, "app.log.json"),
-            "maxBytes": 1024 * 1024 * 2000,
-            "backupCount": 10,
-            "formatter": "json",
+        "console": {
+            "level": "NOTSET",
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
         },
     },
     "loggers": {
         "django": {
-            "handlers": ["app_log_file"],
+            "handlers": ["console"],
             "level": LOG_LEVEL,
         },
         "django.server": {
-            "handlers": ["app_log_file"],
+            "handlers": ["console"],
             "level": LOG_LEVEL,
             "propagate": False,
         },
