@@ -64,6 +64,7 @@ urlpatterns = [
     path("api/payments/", include("payroll.urls")),
     path("api/hr/", include("humanresources.urls")),
     path("api/", include("appointments.urls")),
+    path("api/", include("daysoff.urls")),
     path(
         "api/schema/redoc/",
         SpectacularRedocView.as_view(url_name="schema"),

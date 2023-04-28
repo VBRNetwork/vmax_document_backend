@@ -98,6 +98,7 @@ INSTALLED_APPS = (
         "payroll",
         "humanresources",
         "appointments",
+        "daysoff",
     ]
     + ADDONS
     + MICROSERVICES
@@ -210,6 +211,14 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
 AUTH_USER_MODEL = "users.User"
 ACCOUNT_AUTHENTICATION_METHOD = "email"
+
+EMAIL_CLIENT_ID = "8b6610e3-a7ea-4fcf-ac59-1e54a7d85e9f"
+EMAIL_CLIENT_SECRET = "PJr8Q~j.4KthCwjoVt6cGMEr1ZYGzHl2ROEZ7blo"
+EMAIL_TENANT_ID = "1999d1ab-f68f-4f7a-b94e-9aa8a84542af"
+EMAIL_RESOURCE = "https://graph.microsoft.com/"
+EMAIL_SCOPES = ["https://graph.microsoft.com/.default"]
+EMAIL_SEND_FROM = "wizards@veelancing.io"
+EMAIL_SEND_TO = "stefan@veelancing.io"
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny",),

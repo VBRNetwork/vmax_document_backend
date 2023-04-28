@@ -75,6 +75,19 @@ class CompanyLocations(models.Model):
 
     def __str__(self):
         return f"NAME: {self.location_name} | CITY: {self.location_city}| MANAGER: {self.location_manager.username}"
+    
+class EmailReceiverAddresses(models.Model):
+
+    id = models.AutoField(primary_key=True)
+    email_address = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return self.email_address
+    
+    class Meta:
+        verbose_name = "Email Receiver Address"
+        verbose_name_plural = "Email Receiver Addresses"
+        ordering = ["-id"]
 
 
 class Documents(models.Model):

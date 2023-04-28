@@ -95,6 +95,7 @@ INSTALLED_APPS = (
         "payroll",
         "humanresources",
         "appointments",
+        "daysoff",
     ]
     + ADDONS
     + MICROSERVICES
@@ -155,7 +156,7 @@ DATABASES = {
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://40.113.167.20:6379",
+        "LOCATION": "redis://74.234.184.170:6379/2",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         },
@@ -166,12 +167,12 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("40.113.167.20", 6379)],
+            "hosts": [("74.234.184.170", 6379)],
         },
     },
 }
 
-DEFENDER_REDIS_URL = "redis://40.113.167.20:6379"
+DEFENDER_REDIS_URL = "redis://74.234.184.170:6379/3"
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
